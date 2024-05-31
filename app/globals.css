@@ -2,30 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer components{
+   /* utils start */
+    .navUl{
+      @apply flex items-center gap-8
+    }
+    .navUl a{
+      @apply text-sm font-medium hover:text-blue-900 hover:border-b dark:hover:text-blue-300 duration-200
+    }
+    .darkBgContainer{
+      @apply bg-slate-950 text-gray-200
+    }
+    .lightBgContainer{
+      @apply bg-gray-100 text-black
+    }
+    .darkBg{
+      @apply dark:bg-slate-900 text-gray-200 duration-150 border-slate-700
+    }
+    .lightBg{
+      @apply  bg-gray-200 text-black duration-150 border-gray-300
+    }
 
+    .page{
+      @apply px-5
+    }
+    .button{
+      @apply py-3 px-5 my-5 rounded-md text-center text-black dark:text-gray-300
+    }
+   /* utils End */
+
+
+   /* components start */
+   
+   .info{
+    @apply flex items-center justify-between flex-wrap py-10 my-10  
+   }
+   .info div{
+    @apply w-[32%] border py-5 px-10 lightBg dark:darkBg rounded-md text-center hover:shadow-md dark:hover:shadow-slate-700 duration-100
+   } 
+   .info div h3{
+    @apply text-xl font-medium my-2 capitalize
+   }
+   .info div h1{
+    @apply text-4xl font-bold
+   }
+
+   /* components End */
+
+}
+ 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
