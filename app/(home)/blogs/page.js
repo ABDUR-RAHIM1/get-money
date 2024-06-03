@@ -9,10 +9,10 @@ export default async function BlogPage() {
     const blogs = await blogsData;
 
     return (
-        <div >
+        <div  className="pb-10">
             <PageHero text={"Blogs"} />
 
-            <div>
+            <div >
                 {
                     blogs.map((data, index) => (
                         <Blog

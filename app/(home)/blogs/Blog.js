@@ -4,7 +4,7 @@ import React from 'react'
 export default function Blog(props) {
     const { title, description, date, image } = props.data
     return (
-        <div className='page lightBg dark:darkBg flex items-center justify-between gap-5 py-5 my-5 border-b'>
+        <div className='page lightBg dark:darkBg flex items-center justify-between gap-5 py-5  mt-5 border-b'>
             <div className='w-[20%] border'>
                 <img className='w-full h-[200px] rounded-md border border-gray-500' src={image} alt="image" />
             </div>
