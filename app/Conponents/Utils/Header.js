@@ -32,7 +32,7 @@ export default function Header() {
     ]
 
     return (
-        <div className='page sticky top-0 flex items-center justify-between py-5 bg-gray-100 dark:bg-slate-800 dark:text-white  '>
+        <div className='page sticky top-0 flex items-center justify-between py-5 bg-gray-100 dark:bg-slate-900 border-b border-gray-300 dark:border-slate-800 dark:text-white  '>
             <div className="logo text-2xl font-medium">
                 <Link href={"/"}>
                     ༺✮•°◤ 𝙂𝙀𝙏 𝙈𝙊𝙉𝙀𝙔 ◥°•✮༻
@@ -46,9 +46,9 @@ export default function Header() {
                         ))
                     }
 
-                    <button className='  hover:border-0 capitalize text-center bg-blue-600 text-white rounded-md py-2 px-5'>
+                    <Link href={'/auth'} className='  hover:border-0 capitalize text-center bg-blue-600 text-white rounded-md py-2 px-5'>
                         login
-                    </button>
+                    </Link>
 
                     <div className=' relative'>
                         <button onClick={handleShowProfileMenu}>
@@ -62,7 +62,7 @@ export default function Header() {
                         </button>
 
                         <div onBlur={handleBlur} className={`${showProfileMenu ? "scale-y-1" : "scale-y-0"} origin-top z-[999] from-gray-300 flex flex-col gap-4 w-[150px]  h-[150px] bg-gray-200 px-2 py-4 absolute top-16 right-0 `}>
-                            <Link href={"/"}>Profile</Link>
+                            <Link href={"/profile"}>Profile</Link>
                             <Link href={"/"}>Profile</Link>
                             <Link href={"/"}>Profile</Link>
                         </div>
