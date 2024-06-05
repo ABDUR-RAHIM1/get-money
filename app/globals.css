@@ -22,17 +22,17 @@
       @apply dark:bg-slate-900 text-gray-200 duration-150 border-slate-700
     }
     .lightBg{
-      @apply  bg-gray-200 text-black duration-150 border-gray-300
+      @apply  bg-gray-100 text-black duration-150 border-gray-300
     }
 
     .page{
       @apply px-5
     }
     .button{
-      @apply py-3 px-5 my-5 rounded-md text-center text-black dark:text-gray-300 hover:shadow-md
+      @apply py-3 px-5 my-5 rounded-md text-center text-black dark:text-gray-300 hover:shadow-md dark:shadow-black
     }
     .form{
-      @apply flex-1 ml-5 border border-gray-300 dark:border-slate-800 py-5 px-4 rounded-md
+      @apply flex-1 border border-gray-300 dark:border-slate-800 py-5 px-4 rounded-md
     }
     .form h1{
       @apply text-3xl text-blue-600 dark:text-white my-4 font-medium capitalize
